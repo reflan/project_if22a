@@ -80,30 +80,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 CarouselSlider(
                   items: [
                     BeritaTerkini(
-                      'https://teknokrat.ac.id/wp-content/uploads/2023/04/Sekar-Kinasih-040423-1.jpg',
-                      'judul 1',
-                      'tanggal 1',
-                    ),
+                        'https://lampost.co/wp-content/uploads/2023/11/universitas-teknokrat-indonesia-gelar-workshop-metaverse-102-350x250.jpg',
+                        'Universitas Teknokrat Indonesia Gelar Workshop Metaverse 102',
+                        '22/11/2023'),
                     BeritaTerkini(
-                      'https://teknokrat.ac.id/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-04-at-18.00.09.jpeg',
-                      'judul 2',
-                      'tanggal 2',
-                    ),
+                        'https://lampost.co/wp-content/uploads/2023/10/membanggakan-mahasiswa-universitas-teknokrat-indonesia-kuliah-di-luar-negeri-350x250.jpg',
+                        'Membanggakan! Mahasiswa Universitas Teknokrat Indonesia Kuliah di Luar Negeri',
+                        '20/10/2023'),
                     BeritaTerkini(
-                      'https://teknokrat.ac.id/wp-content/uploads/2023/04/Tim-Tari-Teknokrat-120323.jpeg',
-                      'judul 3',
-                      'tanggal 3',
-                    ),
+                        'https://lampost.co/wp-content/uploads/2024/04/uti-1-350x250.jpg',
+                        'Prodi Matematika UTI Sukses Tingkatkan Akreditasi',
+                        '17/04/2024'),
                     BeritaTerkini(
-                      'https://teknokrat.ac.id/wp-content/uploads/2023/04/ddaa.png',
-                      'judul 4',
-                      'tanggal 4',
-                    ),
+                        'https://lampost.co/wp-content/uploads/2024/04/uti-350x250.jpg',
+                        'UTI dan BPPTIK Selenggarakan Pelatihan dan Sertifikasi Kompetensi Teknologi',
+                        '03/04/2024'),
                     BeritaTerkini(
-                      'https://teknokrat.ac.id/wp-content/uploads/2023/04/Sekar-Kinasih-040423-1.jpg',
-                      'judul 5',
-                      'tanggal 5',
-                    ),
+                        'https://lampost.co/wp-content/uploads/2024/02/penguasaan-dasar-dasar-jurnalistik-penting-untuk-hasilkan-berita-efektif-350x250.jpg.webp',
+                        'UTI Latih Dosen dan Tendik dengan Ilmu Jurnalistik',
+                        '12/02/2024'),
                   ],
                   options: CarouselOptions(
                       height: 170,
