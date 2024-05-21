@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:project_if22a/config/asset.dart';
 import 'package:project_if22a/event/event_db.dart';
 import 'package:project_if22a/model/mahasiswa.dart';
+import 'package:project_if22a/screen/admin/add_update_mahasiswa.dart';
 
 class ListMahasiswa extends StatefulWidget {
   const ListMahasiswa({super.key});
@@ -59,7 +61,8 @@ class _ListMahasiswaState extends State<ListMahasiswa> {
             bottom: 16,
             right: 16,
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () =>
+                  Get.to(AddUpdateMahasiswa())?.then((value) => getMahasiswa()),
               child: Icon(Icons.add),
               backgroundColor: Asset.colorAccent,
             ),
