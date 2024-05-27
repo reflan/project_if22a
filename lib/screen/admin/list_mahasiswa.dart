@@ -27,6 +27,37 @@ class _ListMahasiswaState extends State<ListMahasiswa> {
     super.initState();
   }
 
+  void showOption(Mahasiswa? mahasiswa) async {
+    var result = await Get.dialog(
+        SimpleDialog(
+          children: [
+            ListTile(
+              onTap: () => Get.back(result: 'update'),
+              title: Text('Update'),
+            ),
+            ListTile(
+              onTap: () => Get.back(result: 'delete'),
+              title: Text('Delete'),
+            ),
+            ListTile(
+              onTap: () => Get.back(),
+              title: Text('Close'),
+            )
+          ],
+        ),
+        barrierDismissible: false);
+    switch (result) {
+      case 'update':
+        Get.to(AddUpdateMahasiswa(mahasiswa: mahasiswa))
+            ?.then((value) => getMahasiswa());
+        break;
+      case 'delete':
+        EventDb.deleteMahasiswa(mahasiswa!.npm!)
+            .then((value) => getMahasiswa());
+        break;
+    }
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -50,7 +81,10 @@ class _ListMahasiswaState extends State<ListMahasiswa> {
                       title: Text(mahasiswa.nama ?? ''),
                       subtitle: Text(mahasiswa.npm ?? ''),
                       trailing: IconButton(
-                          onPressed: () {}, icon: Icon(Icons.more_vert)),
+                          onPressed: () {
+                            showOption(mahasiswa);
+                          },
+                          icon: Icon(Icons.more_vert)),
                     );
                   },
                 )
